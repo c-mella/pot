@@ -1,7 +1,19 @@
 @font-face {
-    font-family: 'CustomFont';
-    src: url('/fonts/custom-font.woff2') format('woff2'),
-         url('/fonts/custom-font.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
+     font-family: 'Curiosity-TWDC';
+     src: url('/fonts/CuriosityTWDC-L.woff2') format('woff2'),
+         url('/fonts/CuriosityTWDC-L.woff') format('woff');
+     font-weight: 300;
+     font-style: normal;
+     font-display: swap;
+ }
+ 
+ @font-face {
+     font-family: 'Curiosity-TWDC';
+     src: url('/fonts/CuriosityTWDC-DB.woff2') format('woff2'),
+         url('/fonts/CuriosityTWDC-DB.woff') format('woff');
+     font-weight: 600;
+     font-style: normal;
+     font-display: swap;
+ }
+ 
+ 
