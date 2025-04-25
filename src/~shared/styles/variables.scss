@@ -1,0 +1,61 @@
+$white: #fff;
+$black: #000;
+$ash: #9397A1;
+
+@mixin  vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+@mixin  horizontal-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@mixin  perfect-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin largerThanDesk {
+    @include ultrawide { @content; }
+    @include wide { @content; }
+  }
+
+@mixin ultrawide {
+    @media only screen and (min-width: 1600px) {
+        @content
+    }
+};
+
+@mixin wide {
+    @media only screen
+        and (min-width: 1280px) and (max-width: 1599px) {
+        @content
+    }
+};
+
+@mixin desktop {
+    @media only screen
+        and (min-width: 960px) and (max-width: 1279px) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media only screen
+        and (min-width: 768px) and (max-width: 959px) {
+        @content
+    }
+};
+
+@mixin mobile {
+    @media only screen
+        and (max-width: 767px) {
+        @content
+    }
+};

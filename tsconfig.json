@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~*": [
+        "src/~*",
+        "dist/src/~*"
+      ]
+    },
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "allowJs": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "src",
+    "next.config.cjs",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
