@@ -1,6 +1,24 @@
 $white: #fff;
 $black: #000;
 $ash: #9397A1;
+$teal: #2bc3c1;
+$mid: #1b6a7b;
+$dark: #003645;
+
+@mixin light {
+    font-family: 'Curiosity-TWDC';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@mixin demi {
+    font-family: 'Curiosity-TWDC';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 @mixin  vertical-center {
     position: absolute;

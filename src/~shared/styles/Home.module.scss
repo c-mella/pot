@@ -1,12 +1,92 @@
 @import "~shared/styles/variables.scss";
 
-.home {
+.container {
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(45, 179, 193, 1) 0%, rgba(255, 255, 255, 1) 60%);
+  flex-direction: column;
+  font-size: 1vw;
+  gap: 1vw;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav {
+    margin-top: 1.25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100%;
+    gap: 5vw;
 
-    *{
-        margin: 0;
-        padding: 0;
+    .option {
+      @include light;
+      background: none;
+      border: none;
+      font-size: 1.65vw;
+      text-transform: capitalize;
+      color: $mid;
+      cursor: pointer;
+      line-height: 0.8;
+      padding: 1vw 2vw;
+      border-radius: 1vw;
+      height: fit-content;
+
+      &[data-active="true"] {
+        @include demi;
+      }
+
+      &[data-hovered="true"],
+      &:hover {
+        background-color: rgba($dark, 0.125);
+      }
     }
+  }
 
+  .grid {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    .wrap {
+      width: 95%;
+      padding: 2vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      position: relative; // ensures scaling doesn't get clipped
+
+      .item {
+        flex: 0 1 calc(33.333% - 1rem); // allow room for scale
+        height: 18vw;
+        background: $mid;
+        border-radius: 2vw;
+        cursor: pointer;
+        transform-origin: center;
+        transition: 0.25s ease-in-out;
+
+        &[data-hovered="true"],
+        &:hover {
+          transform: scale(1.035);
+          z-index: 2;
+        }
+      }
+    }
+  }
 }
