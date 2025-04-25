@@ -70,10 +70,10 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       gap: 1.5rem;
-      position: relative; // ensures scaling doesn't get clipped
+      position: relative; 
 
       .item {
-        flex: 0 1 calc(33.333% - 1rem); // allow room for scale
+        flex: 0 1 calc(33.333% - 1rem); 
         height: 18vw;
         background: $mid;
         border-radius: 2vw;
@@ -88,5 +88,10 @@
         }
       }
     }
+  }
+
+  .nav,.grid{
+    transition: opacity 1s ease-in-out;
+    &[data-fade="true"]{opacity: 0;}
   }
 }

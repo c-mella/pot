@@ -66,10 +66,12 @@ export default function Home() {
   });
 
   return (
-    <div className={`${styles.container} ${transitioning ? styles.fadeOut : ''}`}>
+    <div className={styles.container}>
       <Head><title>tvOS test</title></Head>
 
-      <div className={styles.nav}>
+      <div
+        data-fade={transitioning}
+        className={styles.nav}>
         {navOptions.map((label, index) => (
           <button
             key={label}
@@ -83,7 +85,9 @@ export default function Home() {
         ))}
       </div>
 
-      <div className={styles.grid}>
+      <div
+        data-fade={transitioning}
+        className={styles.grid}>
         <div className={styles.wrap}>
           {projects.map((_, index) => (
             <div
