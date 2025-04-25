@@ -1,0 +1,15 @@
+@import "~shared/styles/variables.scss";
+
+.cont{
+    width: 100svw;
+    height: 100svh;
+    background-color: maroon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        width: auto;
+        height: 30vw;
+    }
+}
