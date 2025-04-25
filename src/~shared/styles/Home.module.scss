@@ -16,6 +16,11 @@
     padding: 0;
   }
 
+  .nav,.grid{
+    transition: opacity 0.3s ease-in-out;
+    &[data-fade="true"]{opacity: 0;}
+  }
+
   .nav {
     margin-top: 1.25vw;
     display: flex;
@@ -56,12 +61,13 @@
     overflow-x: hidden;
     display: flex;
     justify-content: center;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    transition-delay: 0.3;
 
     &::-webkit-scrollbar {
       display: none;
     }
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 
     .wrap {
       width: 95%;
@@ -88,10 +94,5 @@
         }
       }
     }
-  }
-
-  .nav,.grid{
-    transition: opacity 1s ease-in-out;
-    &[data-fade="true"]{opacity: 0;}
   }
 }

@@ -52,12 +52,10 @@ export default function Home() {
       if (focusLayer === "nav") {
         setView(navOptions[focusedNavIndex]);
       } else {
-        // Start fade out
         setTransitioning(true);
         setTimeout(() => {
-          // After fade, navigate
           router.push(`/projects/active/${projects[hovered]}`);
-        }, 300); // match the fade-out duration
+        }, 1000);
       }
     },
     onBack: () => {
