@@ -15,7 +15,7 @@ export default function Home() {
   const [transitioning, setTransitioning] = useState(false);
 
   const projects = ["red", "yellow", "blue"];
-  const bgColors = ["maroon", "goldenrod", "navy"];
+  const bgColors = ["red", "goldenrod", "blue"];
 
   const router = useRouter();
 
